@@ -56,10 +56,11 @@ body {
 }
 
 #dPadBG {
+    /* background-color: coral; */
     display: block;
     position: absolute;
     width: 700px;
-    height: 500px;
+    height: 430px;
 }
 
 .dPadBtns {
@@ -69,6 +70,8 @@ body {
     width: 350px;
     height: 330px;
     border-radius: 2%;
+    border-bottom: 4px solid limegreen;
+
     top: 100px;
     left: 175px;
 }
@@ -188,6 +191,24 @@ body {
     left: 145px;
 }
 
+#slider {
+    background-color: rgb(36, 36, 36);
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;    
+    z-index: -1;
+    width: 350px;
+    height: 330px;
+    border-radius: 2%;
+    top: 120px;
+    left: 0px;
+    font-size: 32px;
+    transition: all .5s ease-in-out;
+}
+
+
+
 @keyframes pulseFull {
     0% {
         background-color: limegreen;
@@ -208,10 +229,14 @@ body {
     }
 }
 
+
 @media (max-width: 640px) {
 
 #dPadBG {
-    scale: 80%;
+    scale: 70%;
+}
+#slider {
+    scale: 70%;
 }
 }
 

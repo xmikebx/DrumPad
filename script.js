@@ -1,14 +1,15 @@
-let boomA = document.getElementById(`boomA`);
-let clapA = document.getElementById(`clapA`);
-let hihatA = document.getElementById(`hihatA`);
-let kickA = document.getElementById(`kickA`);
-let openhatA = document.getElementById(`openhatA`);
-let rideA = document.getElementById(`rideA`);
-let snareA = document.getElementById(`snareA`);
-let tinkA = document.getElementById(`tinkA`);
-let tomA = document.getElementById(`tomA`);
+const boomA = document.getElementById(`boomA`);
+const clapA = document.getElementById(`clapA`);
+const hihatA = document.getElementById(`hihatA`);
+const kickA = document.getElementById(`kickA`);
+const openhatA = document.getElementById(`openhatA`);
+const rideA = document.getElementById(`rideA`);
+const snareA = document.getElementById(`snareA`);
+const tinkA = document.getElementById(`tinkA`);
+const tomA = document.getElementById(`tomA`);
 
 const btnList = document.getElementsByClassName(`btn`);
+const slider = document.getElementById(`slider`);
 
     document.querySelectorAll('.btn').forEach(item => {
         item.addEventListener('click', (e) => {
@@ -98,3 +99,16 @@ const btnList = document.getElementsByClassName(`btn`);
             }                       
         });
     });
+    let eventRun = 0;
+
+    document.getElementById(`slider`).addEventListener('click', (e) => {
+        eventRun++;
+
+        if(eventRun <2) {
+        slider.style.top = "250px";
+    }   else if(eventRun == 2) {
+        slider.style.top = "120px";
+        eventRun = 0;
+    }
+    });
+
